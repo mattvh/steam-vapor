@@ -70,7 +70,7 @@ class Steam
 		uid = Integer(user) rescue user
 		id = SteamId.new(uid)
 		puts "\033[36m#{id.nickname}\033[0m"
-		puts "\033[32mStatus:\033[0m  #{id.state_message.sub('<br/>',': ')}"
+		puts "\033[32mStatus:\033[0m  #{id.state_message.sub('<br/>',': ').gsub(/<\/?[^>]*>/, "")}"
 		puts id.summary
 	end
 
@@ -87,7 +87,7 @@ class Steam
 			friend = SteamId.new(f.steam_id64)
 			uid = (friend.custom_url) ? friend.custom_url : f.steam_id64
 			puts "\033[36m#{friend.nickname}\033[0m [#{uid}]"
-			puts "#{friend.state_message.sub('<br/>',': ')}\n\n"
+			puts "#{friend.state_message.sub('<br/>',': ').gsub(/<\/?[^>]*>/, "")}\n\n"
 		end
 	end
 
