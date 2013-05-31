@@ -58,4 +58,11 @@ class STConfig
 
 
 
+	def set_user(me)
+		@data['me'] = me
+		@data.save
+	end
+
+
+
 end

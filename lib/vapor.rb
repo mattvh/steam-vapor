@@ -88,7 +88,13 @@ module Vapor
 
 		desc "friends", "Display friends list"
 		def friends
-			Steam.friends_list
+			Steam.friends_list(@config.data['me'])
+		end
+
+
+		desc "mynameis <me>", "Tell Vapor your Steam username or numeric Steam ID"
+		def mynameis(me)
+			@config.set_user(me)
 		end
 
 

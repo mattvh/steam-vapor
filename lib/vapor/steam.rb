@@ -76,8 +76,12 @@ class Steam
 
 
 
-	def self.friends_list
-		id = SteamId.new('redwall_hp')
+	def self.friends_list(me)
+		unless me.length > 0
+			puts "You have not set your Steam ID yet. Run \"vapor user mynameis <username or numeric ID>\""
+			return
+		end
+		id = SteamId.new(me)
 		puts "\n"
 		id.friends.each do |f|
 			friend = SteamId.new(f.steam_id64)
