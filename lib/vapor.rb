@@ -1,5 +1,11 @@
 require "vapor/version"
 
+require 'thor'
+require 'user_config'
+require 'steam-condenser'
+require 'vapor/steam'
+require 'vapor/config'
+
 
 module Vapor
 
