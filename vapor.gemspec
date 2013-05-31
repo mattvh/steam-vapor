@@ -5,7 +5,7 @@ require 'vapor/version'
 
 Gem::Specification.new do |spec|
 	
-	spec.name          = "vapor"
+	spec.name          = "steam-vapor"
 	spec.version       = Vapor::VERSION
 	spec.authors       = ["redwallhp"]
 	spec.description   = "CLI Steam client"
