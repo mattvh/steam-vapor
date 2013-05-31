@@ -25,3 +25,5 @@ First, ensure that you have Ruby 1.9.x installed. (Vapor was written on Ruby 1.9
 * `vapor user mynameis you` — (Replace "you" with your Steam username or numeric ID.) This tells Vapor who you are so the friends list will work.
 * `vapor user friends` — Displays a listing of your Steam friends, with their current status.
 * `vapor user profile username` — Displays a brief overview of the profile matching "username."
+
+Note: For the most accurate command listing, use the `vapor` command's built-in help function.
