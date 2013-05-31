@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
 	spec.add_development_dependency "bundler", "~> 1.3"
 	spec.add_development_dependency "rake"
 
-	s.add_runtime_dependency "thor"
-	s.add_runtime_dependency "user_config"
-	s.add_runtime_dependency "steam-condenser"
+	spec.add_runtime_dependency "thor"
+	spec.add_runtime_dependency "user_config"
+	spec.add_runtime_dependency "steam-condenser"
 
 end
