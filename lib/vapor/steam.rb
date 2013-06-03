@@ -9,9 +9,10 @@ class Steam
 		if server
 
 			server_info = server.server_info
+			game = self.game_name_string(server_info[:game_id])
 
 			puts "----------------------------------------------------"
-			puts "\033[36m" + server_info[:server_name] + "\033[0m"
+			puts "\033[36m" + server_info[:server_name] + "\033[0m  [#{game}] "
 			puts "\033[32mPlayers:\033[0m #{server_info[:number_of_players]}/#{server_info[:max_players]} \t \033[32mMap:\033[0m #{server_info[:map_name]}"
 			puts "----------------------------------------------------"
 
@@ -62,6 +63,24 @@ class Steam
 			server = nil
 		end
 		return server
+	end
+
+
+
+	def self.game_name_string(gameid)
+		games = {
+			440 => "TF2",
+			240 => "CS:S",
+			730 => "CS:GO",
+			320 => "HL2",
+			500 => "L4D",
+			550 => "L4D2"
+		}
+		if games.has_key?(gameid)
+			return games[gameid]
+		else
+			return "SRC"
+		end
 	end
 
 
