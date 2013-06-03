@@ -30,7 +30,7 @@ module Vapor
 
 
 		desc "list", "List servers"
-		def list()
+		def list
 			Steam.server_listing(@config.data['servers'])
 		end
 
