@@ -15,10 +15,10 @@ First, ensure that you have Ruby 1.9.x installed. (Vapor was written on Ruby 1.9
 **Servers**
 
 * `vapor server add nickname 127.0.0.1` — Save a server to Vapor's server list. The default port used is 27015, though you can specify another by inputting it after the IP/domain (with a space as a separator). The custom nickname is how Vapor keeps track of the server.
-* `vaport server rm nickname` — Remove the server corresponding to "nickname."
+* `vapor server rm nickname` — Remove the server corresponding to "nickname."
 * `vapor server connect nickname` — Launch Steam and connect to the server corresponding to "nickname."
 * `vapor server list` — View a listing of every server you have saved, complete with player counts and the current map.
-* `vaport server info nickname` — Display the same information as `vapor server list`, but with a listing of players and their scores.
+* `vapor server info nickname` — Display the same information as `vapor server list`, but with a listing of players and their scores.
 
 **Users**
 
